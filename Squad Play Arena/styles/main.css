@@ -566,6 +566,28 @@ Fields
 }
 
 
+/*Custom notification*/
+
+#kendoUiMobileApp .notify-pop-up {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 65px;
+    z-index: 999;
+    text-align: center;
+    display: none;
+}
+
+#kendoUiMobileApp .notify-pop-up__content {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 30px;
+    background: #606060;
+    border-radius: 30px;
+    font-size: 1.2em;
+}
+
+
 /* START_CUSTOM_CODE_kendoUiMobileApp */
 
 

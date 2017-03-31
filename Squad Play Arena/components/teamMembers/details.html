@@ -1,0 +1,176 @@
+<div data-role="view" data-title="Details" data-model="app.teamMembers.teamMembersModel" data-bind="events: { show: detailsShow }" id="teamMembersModelScreen" class="screen screen--detail">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-bind="text: strings.teamMembers.teamMembersModel.detailHeaderFieldValue"></span>
+            <a data-role="button" data-align="right" data-bind="events: { click: editClick }">Edit</a>
+        </div>
+    </header>
+
+    <div class="details-content screen__content screen__content--details">
+        <div class="km-listview-wrapper">
+            <ul class="km-listview km-list km-listinset details-fields">
+
+
+                <li class="detail-content-item">
+
+
+                    <label id="nameField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.name.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Name"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="surnameField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.surname.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Surname"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="birthDateField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.birthDate.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="text: currentItem.Birth_date" data-format="d"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="numberPlayerField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.numberPlayer.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Number"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="mathField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.math.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Match"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="goalPlayerField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.goalPlayer.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Goal"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="assistPlayerField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.assistPlayer.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Assist"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="mvpPlayersField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.mvpPlayers.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.MVP"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="positionPlayerField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.positionPlayer.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Position"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+
+                    <label id="descriptionPlayersField" class="km-label-above field field--text-block">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.descriptionPlayers.title"></span>
+
+
+                        <div class="textBlock field__content" data-bind="html: currentItem.Description"></div>
+
+                    </label>
+
+
+                </li>
+                <li class="detail-content-item">
+
+                    <div id="imagePlayerField" class="km-label-above imageListItem field field--image">
+
+                        <div class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm7.imagePlayer.title"></div>
+
+                        <div class="align-center field__content">
+
+                            <img data-bind="attr: { src: currentItem.imagePlayerImage }">
+
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- START_CUSTOM_CODE_teamMembersModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_teamMembersModel -->
+</div>

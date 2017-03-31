@@ -5,12 +5,81 @@
     "qrCodeScan": "Scan"
   },
   "homeView": {
-    "title": "Home View"
+    "title": "Home"
   },
-  "settingsView": {
-    "title": "Settings"
+  "teamDetailView": {
+    "title": "My Squad",
+    "teamDetailViewModel": {
+      "detailHeaderFieldValue": "Detail",
+      "editableListForm3": {
+        "teamName": {
+          "title": "Nazwa drużyny"
+        },
+        "teamCapitan": {
+          "title": "Kapitan"
+        },
+        "photoTeam": {
+          "title": "Herb"
+        }
+      }
+    }
   },
-  "contactsView": {
-    "title": "Contacts"
+  "teamMembers": {
+    "title": "Team Members",
+    "teamMembersModel": {
+      "detailHeaderFieldValue": "Detail Players",
+      "editableListForm7": {
+        "name": {
+          "title": "Name"
+        },
+        "surname": {
+          "title": "Surname"
+        },
+        "birthDate": {
+          "title": "Birth date"
+        },
+        "numberPlayer": {
+          "title": "Number"
+        },
+        "math": {
+          "title": "Math"
+        },
+        "goalPlayer": {
+          "title": "Goal"
+        },
+        "assistPlayer": {
+          "title": "Assist"
+        },
+        "mvpPlayers": {
+          "title": "MVP"
+        },
+        "positionPlayer": {
+          "title": "Position"
+        },
+        "descriptionPlayers": {
+          "title": "Description"
+        },
+        "imagePlayer": {
+          "title": "Photo player"
+        }
+      },
+      "editableListForm14": {
+        "nameList": {
+          "title": "Surname"
+        },
+        "imageList": {
+          "title": "Image"
+        }
+      },
+      "editScreenHeaderValue": "Edit",
+      "editableListForm15": {
+        "imagePlayerEdit": {
+          "title": "Image"
+        },
+        "descriptionEdit": {
+          "title": "Edit description"
+        }
+      }
+    }
   }
 }

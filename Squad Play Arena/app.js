@@ -12,12 +12,16 @@
         },
         navigation: {
             viewModel: kendo.observable()
+        },
+        showMore: {
+            viewModel: kendo.observable()
         }
     };
 
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
+                transition: 'slide',
                 skin: 'nova',
                 initial: 'components/homeView/view.html'
             });
@@ -26,25 +30,39 @@
         });
     };
 
+    $(document).ready(function() {
+
+        var navigationShowMoreView = $('#navigation-show-more-view').find('ul'),
+            allItems = $('#navigation-container-more').find('a'),
+            navigationShowMoreContent = '';
+
+        allItems.each(function(index) {
+            navigationShowMoreContent += '<li>' + allItems[index].outerHTML + '</li>';
+        });
+
+        navigationShowMoreView.html(navigationShowMoreContent);
+        kendo.bind($('#navigation-show-more-view'), app.showMore.viewModel);
+
+        app.notification = $("#notify");
+
+    });
+
+    app.listViewClick = function _listViewClick(item) {
+        var tabstrip = app.mobileApp.view().footer.find('.km-tabstrip').data('kendoMobileTabStrip');
+        tabstrip.clear();
+    };
+
+    app.showNotification = function(message, time) {
+        var autoHideAfter = time ? time : 3000;
+        app.notification.find('.notify-pop-up__content').html(message);
+        app.notification.fadeIn("slow").delay(autoHideAfter).fadeOut("slow");
+    };
+
     if (window.cordova) {
         document.addEventListener('deviceready', function() {
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
             }
-
-            var element = document.getElementById('appDrawer');
-            if (typeof(element) != 'undefined' && element !== null) {
-                if (window.navigator.msPointerEnabled) {
-                    $('#navigation-container').on('MSPointerDown', 'a', function(event) {
-                        app.keepActiveState($(this));
-                    });
-                } else {
-                    $('#navigation-container').on('touchstart', 'a', function(event) {
-                        app.keepActiveState($(this).closest('li'));
-                    });
-                }
-            }
-
             bootstrap();
         }, false);
     } else {
@@ -158,6 +176,7 @@
                 }
 
                 app.navigation.viewModel.set('strings', strings);
+                app.showMore.viewModel.set('strings', strings);
             }
         },
         loadCulture = function(code) {

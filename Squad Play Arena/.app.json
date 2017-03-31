@@ -5,31 +5,296 @@
       "type": "kendo-ui-mobile:view",
       "name": "homeView",
       "components": [],
-      "title": "Home View",
+      "title": "Home",
       "addToNavigation": true,
       "icon": "home"
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "settingsView",
-      "components": [],
-      "title": "Settings",
+      "name": "teamDetailView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "teamName",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Nazwa drużyny",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "teamCapitan",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Kapitan",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Capitan"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "photoTeam",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Herb",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Photos"
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "detail"
+            }
+          ],
+          "name": "teamDetailViewModel",
+          "dataProvider": "backendServices",
+          "collection": "Team",
+          "headerField": "Description",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailDescriptionField": "Name",
+          "detailImageField": "Photos"
+        }
+      ],
+      "title": "My Squad",
       "addToNavigation": true,
-      "icon": "settings"
+      "icon": "contacts"
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "contactsView",
-      "components": [],
-      "title": "Contacts",
+      "name": "teamMembers",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "name",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Name",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "surname",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Surname",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Surname"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "birthDate",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Birth date",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Birth_date",
+                  "format": "d"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "numberPlayer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Number",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Number"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "math",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Math",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Match"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "goalPlayer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Goal",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Goal"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "assistPlayer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Assist",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Assist"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "mvpPlayers",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "MVP",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "MVP"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "positionPlayer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Position",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Position"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "descriptionPlayers",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Description",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Description"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "imagePlayer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Photo player",
+                  "inputType": "image",
+                  "titlePosition": "top",
+                  "alignment": "center",
+                  "dataBindingImage": "Photos"
+                }
+              ],
+              "name": "editableListForm7",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "nameList",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Surname",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "Surname"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "imageList",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Image",
+                  "inputType": "image",
+                  "titlePosition": "left",
+                  "alignment": "right",
+                  "dataBindingImage": "Photos"
+                }
+              ],
+              "name": "editableListForm14",
+              "formType": "list"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "descriptionEdit",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Edit description",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top",
+                  "dataBinding": "Description"
+                }
+              ],
+              "name": "editableListForm15",
+              "formType": "edit"
+            }
+          ],
+          "name": "teamMembersModel",
+          "dataProvider": "backendServices",
+          "collection": "Players",
+          "headerField": "Name",
+          "iconField": false,
+          "addItemForm": false,
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Edit",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail Players"
+        }
+      ],
+      "title": "Team Members",
       "addToNavigation": true,
       "icon": "contacts"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "backendServices",
+      "source": "everlive",
+      "everliveKey": "epzam3myidwk1lxl",
+      "offlineStorage": true,
+      "title": "Backend Services"
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "drawer",
+  "navigation": "tabstrip",
   "view": "homeView",
+  "transition": "slide",
+  "showMoreTab": true,
   "skin": "nova",
   "skinMainColor": "#32364c",
   "skinTextColor": "#ffffff",
