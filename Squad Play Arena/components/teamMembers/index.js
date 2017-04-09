@@ -254,17 +254,31 @@ app.localization.registerView('teamMembers');
                 fixedData = teamMembersModel.fixHierarchicalData(itemData);
 
             /// start edit form before itemData
+
+            itemData.imageImage = processImage(itemData.Photos);
+
             /// end edit form before itemData
 
             this.set('itemData', itemData);
             this.set('editFormData', {
-                descriptionEdit: itemData.Description,
+                editDescription: itemData.Description,
+                editMvp: itemData.MVP,
+                editAssist: itemData.Assist,
+                numberGoal: itemData.Goal,
+                matchNumber: itemData.Match,
+                numberEdit: itemData.Number,
+                dateEdit: itemData.Birth_date,
+                editSurname: itemData.Surname,
+                textField: itemData.Name,
                 /// start edit form data init
                 /// end edit form data init
             });
 
             /// start edit form show
+
+            app.showFileUploadName('edit-item-view');
             /// end edit form show
+
         },
         linkBind: function(linkString) {
             var linkChunks = linkString.split(':');
@@ -277,13 +291,27 @@ app.localization.registerView('teamMembers');
                 dataSource = teamMembersModel.get('dataSource');
 
             /// edit properties
-            itemData.set('Description', editFormData.descriptionEdit);
+            itemData.set('Description', editFormData.editDescription);
+            itemData.set('MVP', editFormData.editMvp);
+            itemData.set('Assist', editFormData.editAssist);
+            itemData.set('Goal', editFormData.numberGoal);
+            itemData.set('Match', editFormData.matchNumber);
+            itemData.set('Number', editFormData.numberEdit);
+            itemData.set('Birth_date', editFormData.dateEdit);
+            itemData.set('Surname', editFormData.editSurname);
+            itemData.set('Name', editFormData.textField);
             /// start edit form data save
             /// end edit form data save
 
             function editModel(data) {
                 /// start edit form data prepare
+
+                if (data && data.filePhotoUploadIndex) {
+                    itemData.set('Photos', data.filePhotoUploadIndex.Id);
+                }
+
                 /// end edit form data prepare
+
                 dataSource.one('sync', function(e) {
                     /// start edit form data save success
                     /// end edit form data save success
@@ -299,9 +327,49 @@ app.localization.registerView('teamMembers');
                 app.clearFormDomData('edit-item-view');
             };
             /// start edit form save
+
+            var totalUploadFields = 0,
+                uploaded = [];
+
+            var filePhotoUploadReader = new FileReader(),
+                filePhotoUploadField = $("#filePhotoUpload")[0].files[0];
+            if (filePhotoUploadField) {
+                totalUploadFields++;
+                filePhotoUploadReader.onload = function() {
+                    var file = {
+                        "Filename": filePhotoUploadField.name,
+                        "ContentType": filePhotoUploadField.type,
+                        "base64": filePhotoUploadReader.result.split(',')[1]
+                    };
+
+                    dataProvider.files.create(file,
+                        successEdit.bind(this, "filePhotoUploadIndex"),
+                        function(error) {
+                            alert(JSON.stringify(error));
+                        });
+                };
+            }
+
+            if (!filePhotoUploadField) {
+                successEdit("filePhotoUpload", {});
+            } else {
+                filePhotoUploadReader.readAsDataURL(filePhotoUploadField);
+            }
             /// end edit form save
+
             /// start edit form save handler
-            editModel();
+            if (totalUploadFields === 0) {
+                editModel();
+            }
+
+            function successEdit(fileName, data) {
+                uploaded[fileName] = data.result;
+                uploaded.length++;
+
+                if (uploaded.length == totalUploadFields) {
+                    editModel(uploaded);
+                }
+            }
             /// end edit form save handler
         },
         onCancel: function() {

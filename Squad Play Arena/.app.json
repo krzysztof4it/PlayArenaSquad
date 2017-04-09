@@ -243,13 +243,125 @@
               "components": [
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "descriptionEdit",
+                  "name": "textField",
                   "dataBindingRelationChildren": "[]",
                   "dataBindingMultipleSelectChildren": "[]",
-                  "title": "Edit description",
+                  "title": "Name",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "editSurname",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Surname",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Surname"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dateEdit",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date birth",
+                  "inputType": "date",
+                  "titlePosition": "top",
+                  "inputDateType": "date",
+                  "dataBinding": "Birth_date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "numberEdit",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Number",
+                  "inputType": "number",
+                  "titlePosition": "top",
+                  "placeholder": "1-99",
+                  "dataBinding": "Number"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "matchNumber",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Match",
+                  "inputType": "number",
+                  "titlePosition": "top",
+                  "placeholder": "numbers of math",
+                  "dataBinding": "Match"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "numberGoal",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Goal",
+                  "inputType": "number",
+                  "titlePosition": "top",
+                  "placeholder": "Goal",
+                  "dataBinding": "Goal"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "editAssist",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Assist",
+                  "inputType": "number",
+                  "titlePosition": "top",
+                  "placeholder": "Assist",
+                  "dataBinding": "Assist"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "editMvp",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "MVP",
+                  "inputType": "number",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "MVP"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "editDescription",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Description",
                   "inputType": "textArea",
                   "wideFieldTitlePosition": "top",
                   "dataBinding": "Description"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "filePhotoUpload",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Foto",
+                  "inputType": "fileUpload",
+                  "titlePosition": "top",
+                  "fileUploadPlaceholder": "Pick a file...",
+                  "dataBinding": "Photos"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "image",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Image",
+                  "inputType": "image",
+                  "titlePosition": "top",
+                  "alignment": "center",
+                  "dataBindingImage": "Photos"
                 }
               ],
               "name": "editableListForm15",

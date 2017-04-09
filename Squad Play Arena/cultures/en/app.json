@@ -78,6 +78,66 @@
         },
         "descriptionEdit": {
           "title": "Edit description"
+        },
+        "textAreaName": {
+          "title": "Name"
+        },
+        "textAreaSurname": {
+          "title": "Surname"
+        },
+        "dateEdit": {
+          "title": "Date birth"
+        },
+        "numberEdit": {
+          "title": "Number",
+          "placeholder": "1-99"
+        },
+        "matchNumber": {
+          "title": "Match",
+          "placeholder": "numbers of math"
+        },
+        "numberGoal": {
+          "title": "Goal",
+          "placeholder": "Goal"
+        },
+        "editAssist": {
+          "title": "Assist",
+          "placeholder": "Assist"
+        },
+        "editMvp": {
+          "title": "MVP",
+          "placeholder": "Type here ..."
+        },
+        "editPosition": {
+          "title": "Position"
+        },
+        "editDescription": {
+          "title": "Description"
+        },
+        "checkbox": {
+          "title": "Label"
+        },
+        "imageEdit": {
+          "title": "Image"
+        },
+        "textField": {
+          "title": "Name",
+          "placeholder": "Type here ..."
+        },
+        "editSurname": {
+          "title": "Surname",
+          "placeholder": "Type here ..."
+        },
+        "editName": {
+          "title": "Name",
+          "placeholder": "Name"
+        },
+        "filePhotoUpload": {
+          "title": "Foto",
+          "fileUploadPlaceholder": "Pick a file..."
+        },
+        "image": {
+          "title": "Image"
         }
       }
     }

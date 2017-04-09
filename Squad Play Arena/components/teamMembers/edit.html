@@ -12,12 +12,128 @@
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li class="form-content-item">
-                    <label id="descriptionEditField" class="km-label-above field field--textarea">
 
-                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.descriptionEdit.title"></span>
 
-                        <textarea rows="7" data-bind="value: editFormData.descriptionEdit"></textarea>
+                    <label id="textFieldField" class="field km-listview-label field--text km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.textField.title"></span>
+
+
+                        <input id="textField" data-bind="value: editFormData.textField, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.textField.placeholder }" type="text">
+
                     </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="editSurnameField" class="field km-listview-label field--text km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.editSurname.title"></span>
+
+
+                        <input id="editSurname" data-bind="value: editFormData.editSurname, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.editSurname.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="dateEditField" class="field km-listview-label field--date km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.dateEdit.title"></span>
+
+
+                        <input id="dateEdit" data-bind="value: editFormData.dateEdit" type="date">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="numberEditField" class="field km-listview-label field--number km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.numberEdit.title"></span>
+
+
+                        <input id="numberEdit" data-bind="value: editFormData.numberEdit, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.numberEdit.placeholder }" type="number">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="matchNumberField" class="field km-listview-label field--number km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.matchNumber.title"></span>
+
+
+                        <input id="matchNumber" data-bind="value: editFormData.matchNumber, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.matchNumber.placeholder }" type="number">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="numberGoalField" class="field km-listview-label field--number km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.numberGoal.title"></span>
+
+
+                        <input id="numberGoal" data-bind="value: editFormData.numberGoal, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.numberGoal.placeholder }" type="number">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="editAssistField" class="field km-listview-label field--number km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.editAssist.title"></span>
+
+
+                        <input id="editAssist" data-bind="value: editFormData.editAssist, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.editAssist.placeholder }" type="number">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="editMvpField" class="field km-listview-label field--number km-label-above">
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.editMvp.title"></span>
+
+
+                        <input id="editMvp" data-bind="value: editFormData.editMvp, attr: { placeholder: strings.teamMembers.teamMembersModel.editableListForm15.editMvp.placeholder }" type="number">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="editDescriptionField" class="km-label-above field field--textarea">
+
+                        <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.editDescription.title"></span>
+
+                        <textarea rows="7" data-bind="value: editFormData.editDescription"></textarea>
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <div id="filePhotoUploadField" class="field field--file-upload editableListItem fileUploadListItem km-label-above">
+
+                        <div class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.filePhotoUpload.title"></div>
+
+                        <div class="field__content">
+                            <span id="filePhotoUploadName" class="file-upload-name field__content-info"></span>
+                            <a href="javascript:void(0)" class="link" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.filePhotoUpload.fileUploadPlaceholder"></a>
+                            <input id="filePhotoUpload" type="file">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-content-item">
+
+
+                    <div id="imageField" class="field field--image imageListItem km-label-above">
+
+                        <div class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm15.image.title"></div>
+
+                        <div class="align-center field__content">
+
+                            <img data-bind="attr: { src: itemData.imageImage}">
+
+                        </div>
+                    </div>
                 </li>
             </ul>
         </form>
