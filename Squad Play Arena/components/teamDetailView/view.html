@@ -12,7 +12,7 @@
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
     <!-- END_CUSTOM_CODE_teamDetailView -->
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="teamDetailViewModelTemplate" data-bind="source: teamDetailViewModel.dataSource, events: {click: teamDetailViewModel.itemClick}" data-pull-to-refresh="false"
+    <ul class="masterDetailView imageContent  " data-role="listview" data-auto-bind="false" data-style="inset" data-template="teamDetailViewModelTemplate" data-bind="source: teamDetailViewModel.dataSource, events: {click: teamDetailViewModel.itemClick}" data-pull-to-refresh="false"
     data-endless-scroll="false">
     </ul>
 
@@ -22,10 +22,11 @@
 
     <!-- END_CUSTOM_CODE_teamDetailViewModel -->
     <script type="text/x-kendo-template" id="teamDetailViewModelTemplate">
-        <div class="image-with-text">
+        <div class="image-with-text ">
             # data = app.teamDetailView.teamDetailViewModel.fixHierarchicalData(data); #
 
-            <h3>#: data['Description'] #</h3>
+            <img src="#: data['PhotosUrl'] #">
+            <h3>#: data['Name'] #</h3>
 
         </div>
     </script>

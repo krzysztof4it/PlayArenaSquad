@@ -33,8 +33,8 @@ app.localization.registerView('teamMembers');
 
             return img;
         },
-        /// end global model properties
 
+        /// end global model properties
         fetchFilteredData = function(paramFilter, searchFilter) {
             var model = parent.get('teamMembersModel'),
                 dataSource;
@@ -93,6 +93,9 @@ app.localization.registerView('teamMembers');
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
 
+                    dataItem['PhotosUrl'] =
+                        processImage(dataItem['Photos']);
+
                     /// start flattenLocation property
                     flattenLocationProperties(dataItem);
                     /// end flattenLocation property
@@ -118,10 +121,22 @@ app.localization.registerView('teamMembers');
                             field: 'Name',
                             defaultValue: ''
                         },
+                        'Surname': {
+                            field: 'Surname',
+                            defaultValue: ''
+                        },
+                        'Photos': {
+                            field: 'Photos',
+                            defaultValue: ''
+                        },
                     }
                 }
             },
             serverFiltering: true,
+
+            serverPaging: true,
+            pageSize: 10
+
         },
         /// start data sources
         /// end data sources
@@ -227,16 +242,7 @@ app.localization.registerView('teamMembers');
                 return linkChunks[0] + this.get('currentItem.' + linkChunks[1]);
             },
             /// start masterDetails view model functions
-
-            imageBind: function(imageField) {
-                if (!imageField) {
-                    return;
-                }
-
-                return processImage(imageField);
-            },
             /// end masterDetails view model functions
-
             currentItem: {}
         });
 

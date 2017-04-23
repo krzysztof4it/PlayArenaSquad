@@ -28,6 +28,7 @@
     "title": "Team Members",
     "teamMembersModel": {
       "detailHeaderFieldValue": "Detail Players",
+      "editScreenHeaderValue": "Edit",
       "editableListForm7": {
         "name": {
           "title": "Name"
@@ -71,19 +72,14 @@
           "title": "Image"
         }
       },
-      "editScreenHeaderValue": "Edit",
       "editableListForm15": {
-        "imagePlayerEdit": {
-          "title": "Image"
+        "textField": {
+          "title": "Name",
+          "placeholder": "Type here ..."
         },
-        "descriptionEdit": {
-          "title": "Edit description"
-        },
-        "textAreaName": {
-          "title": "Name"
-        },
-        "textAreaSurname": {
-          "title": "Surname"
+        "editSurname": {
+          "title": "Surname",
+          "placeholder": "Type here ..."
         },
         "dateEdit": {
           "title": "Date birth"
@@ -108,29 +104,8 @@
           "title": "MVP",
           "placeholder": "Type here ..."
         },
-        "editPosition": {
-          "title": "Position"
-        },
         "editDescription": {
           "title": "Description"
-        },
-        "checkbox": {
-          "title": "Label"
-        },
-        "imageEdit": {
-          "title": "Image"
-        },
-        "textField": {
-          "title": "Name",
-          "placeholder": "Type here ..."
-        },
-        "editSurname": {
-          "title": "Surname",
-          "placeholder": "Type here ..."
-        },
-        "editName": {
-          "title": "Name",
-          "placeholder": "Name"
         },
         "filePhotoUpload": {
           "title": "Foto",

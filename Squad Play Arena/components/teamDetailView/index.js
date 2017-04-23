@@ -93,6 +93,9 @@ app.localization.registerView('teamDetailView');
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
 
+                    dataItem['PhotosUrl'] =
+                        processImage(dataItem['Photos']);
+
                     /// start flattenLocation property
                     flattenLocationProperties(dataItem);
                     /// end flattenLocation property
@@ -114,14 +117,19 @@ app.localization.registerView('teamDetailView');
             schema: {
                 model: {
                     fields: {
-                        'Description': {
-                            field: 'Description',
+                        'Name': {
+                            field: 'Name',
+                            defaultValue: ''
+                        },
+                        'Photos': {
+                            field: 'Photos',
                             defaultValue: ''
                         },
                     }
                 }
             },
             serverFiltering: true,
+
         },
         /// start data sources
         /// end data sources
@@ -200,8 +208,8 @@ app.localization.registerView('teamDetailView');
                     itemModel = dataSource.getByUid(item);
                 itemModel.PhotosUrl = processImage(itemModel.Photos);
 
-                if (!itemModel.Description) {
-                    itemModel.Description = String.fromCharCode(160);
+                if (!itemModel.Name) {
+                    itemModel.Name = String.fromCharCode(160);
                 }
 
                 /// start detail form initialization

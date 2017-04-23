@@ -12,7 +12,7 @@
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
     <!-- END_CUSTOM_CODE_teamMembers -->
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="teamMembersModelTemplate" data-bind="source: teamMembersModel.dataSource, events: {click: teamMembersModel.itemClick}" data-pull-to-refresh="false"
+    <ul class="masterDetailView multilineImage  " data-role="listview" data-auto-bind="false" data-style="inset" data-template="teamMembersModelTemplate" data-bind="source: teamMembersModel.dataSource, events: {click: teamMembersModel.itemClick}" data-pull-to-refresh="true"
     data-endless-scroll="false">
     </ul>
 
@@ -22,29 +22,12 @@
 
     <!-- END_CUSTOM_CODE_teamMembersModel -->
     <script type="text/x-kendo-template" id="teamMembersModelTemplate">
-        <div class="image-with-text">
+        <div class="image-with-text image-on-right">
             # data = app.teamMembers.teamMembersModel.fixHierarchicalData(data); #
 
+            <img src="#: data['PhotosUrl'] #">
             <h3>#: data['Name'] #</h3>
-
-        </div>
-        <label id="nameListField" class="km-label-above field field--text-block">
-
-            <span class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm14.nameList.title"></span>
-
-
-            <div class="textBlock field__content">#= data['Surname'] #</div>
-
-        </label>
-        <div id="imageListField" class="imageListItem field field--image">
-
-            <div class="field__label" data-bind="text: strings.teamMembers.teamMembersModel.editableListForm14.imageList.title"></div>
-
-            <div class="align-right field__content">
-
-                <img src="#: app.teamMembers.teamMembersModel.imageBind(data['Photos']) #">
-
-            </div>
+            <p>#: data['Surname'] #</p>
         </div>
     </script>
 </div>

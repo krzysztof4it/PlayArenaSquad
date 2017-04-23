@@ -42,16 +42,6 @@
                   "inputType": "textBlock",
                   "wideFieldTitlePosition": "top",
                   "dataBindingOptional": "Capitan"
-                },
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "photoTeam",
-                  "dataBindingRelationChildren": "[]",
-                  "dataBindingMultipleSelectChildren": "[]",
-                  "title": "Herb",
-                  "inputType": "textBlock",
-                  "wideFieldTitlePosition": "top",
-                  "dataBindingOptional": "Photos"
                 }
               ],
               "name": "editableListForm3",
@@ -61,10 +51,14 @@
           "name": "teamDetailViewModel",
           "dataProvider": "backendServices",
           "collection": "Team",
-          "headerField": "Description",
+          "headerField": "Name",
+          "iconField": false,
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
+          "listLayout": "imageContent",
+          "imageField": "Photos",
+          "hasSeparator": true,
           "pullToRefresh": false,
           "endlessScroll": false,
           "isMapView": false,
@@ -215,34 +209,6 @@
               "components": [
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "nameList",
-                  "dataBindingRelationChildren": "[]",
-                  "dataBindingMultipleSelectChildren": "[]",
-                  "title": "Surname",
-                  "inputType": "textBlock",
-                  "wideFieldTitlePosition": "top",
-                  "dataBindingOptional": "Surname"
-                },
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "imageList",
-                  "dataBindingRelationChildren": "[]",
-                  "dataBindingMultipleSelectChildren": "[]",
-                  "title": "Image",
-                  "inputType": "image",
-                  "titlePosition": "left",
-                  "alignment": "right",
-                  "dataBindingImage": "Photos"
-                }
-              ],
-              "name": "editableListForm14",
-              "formType": "list"
-            },
-            {
-              "type": "kendo-ui-mobile:editableListForm",
-              "components": [
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
                   "name": "textField",
                   "dataBindingRelationChildren": "[]",
                   "dataBindingMultipleSelectChildren": "[]",
@@ -378,11 +344,17 @@
           "editScreenHeaderSource": "static",
           "editScreenHeaderValue": "Edit",
           "deleteItemButton": false,
-          "pullToRefresh": false,
+          "listLayout": "multilineImage",
+          "subHeaderField": "Surname",
+          "imageField": "Photos",
+          "imagePosition": "right",
+          "hasSeparator": true,
+          "pullToRefresh": true,
           "endlessScroll": false,
           "isMapView": false,
           "serverSideSorting": false,
-          "serverSidePaging": false,
+          "serverSidePaging": true,
+          "serverSidePagingSize": 5,
           "detailHeaderFieldSource": "static",
           "detailHeaderFieldValue": "Detail Players"
         }

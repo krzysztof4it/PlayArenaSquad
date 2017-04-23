@@ -1,0 +1,29 @@
+{
+    "customCode": [
+        {
+            "file": ".html",
+            "tag": "teamDetailViewModel",
+            "block": "<!-- START_CUSTOM_CODE_teamDetailViewModel -->\n    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->\n\n    <!-- END_CUSTOM_CODE_teamDetailViewModel -->"
+        },
+        {
+            "file": ".js",
+            "tag": "teamDetailViewModel",
+            "block": "// START_CUSTOM_CODE_teamDetailViewModel\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\n\n// END_CUSTOM_CODE_teamDetailViewModel"
+        },
+        {
+            "file": ".html",
+            "tag": "teamMembersModel",
+            "block": "<!-- START_CUSTOM_CODE_teamMembersModel -->\n    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->\n\n    <!-- END_CUSTOM_CODE_teamMembersModel -->"
+        },
+        {
+            "file": ".js",
+            "tag": "teamMembersModel",
+            "block": "// START_CUSTOM_CODE_teamMembersModel\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\n\n// END_CUSTOM_CODE_teamMembersModel"
+        },
+        {
+            "file": ".html",
+            "tag": "editableListForm15",
+            "block": "<!-- START_CUSTOM_CODE_editableListForm15 -->\n        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->\n        <!-- END_CUSTOM_CODE_editableListForm15 -->"
+        }
+    ]
+}
